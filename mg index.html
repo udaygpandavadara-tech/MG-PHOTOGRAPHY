@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG Photo | Gautam Modhvadiya - Photography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mg index.css">
+    <<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-brand">
+            <div class="nav-logo">
+                <i class="fas fa-camera"></i>
+            </div>
+            <div class="nav-text">
+                <span class="nav-title">MG PHOTO</span>
+                <span class="nav-subtitle">Gautam Modhvadiya</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="next page.html">Admin</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="badge">
+                <i class="fas fa-sparkles"></i>
+                Available Now
+            </div>
+            <h1>
+                CAPTURE
+                <span class="highlight">MOMENTS</span>
+                THAT LAST
+            </h1>
+            <p>Award-winning photography that transforms ordinary moments into extraordinary visual narratives. Specializing in editorial, commercial & portrait work.</p>
+            <a href="#contact" class="btn-primary">
+                Let's Work Together
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number primary">8+</div>
+                    <div class="stat-label">Years Active</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number accent">500+</div>
+                    <div class="stat-label">Projects Done</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number primary">15+</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work -->
+        <section class="featured-work reveal">
+            <div class="featured-card">
+                <img src="gautam1.png.webp" alt="Featured Portrait">
+                <div class="featured-overlay">
+                    <span class="featured-tag">Featured Work</span>
+                    <div class="featured-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>LOCATION<br><strong>Jamnagar</strong></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>STATUS<br><strong>OPEN</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="section-header reveal">
+                <div class="section-tag">Portfolio</div>
+                <h2 class="section-title">
+                    SELECTED <span class="highlight">WORKS</span>
+                </h2>
+            </div>
+            
+            <div class="filter-tabs reveal">
+                <button class="filter-btn active" onclick="filterPortfolio('all', this)">All</button>
+                <button class="filter-btn" onclick="filterPortfolio('portrait', this)">Portrait</button>
+                <button class="filter-btn" onclick="filterPortfolio('travel', this)">Travel</button>
+                <button class="filter-btn" onclick="filterPortfolio('editorial', this)">Editorial</button>
+                <button class="filter-btn" onclick="filterPortfolio('commercial', this)">Commercial</button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80" alt="Soft Light">
+                    <span class="portfolio-tag">Soft Light</span>
+                </div>
+                <div class="portfolio-item" data-category="travel">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&auto=format&fit=crop&q=80" alt="Mountains">
+                    <span class="portfolio-tag">Mountains</span>
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80" alt="Fashion">
+                    <span class="portfolio-tag">Fashion</span>
+                </div>
+                <div class="portfolio-item" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&auto=format&fit=crop&q=80" alt="Product">
+                    <span class="portfolio-tag">Product</span>
+                </div>
+                <div class="portfolio-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80" alt="Dramatic">
+                    <span class="portfolio-tag">Dramatic</span>
+                </div>
+                <div class="portfolio-item" data-category="travel">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="Desert">
+                    <span class="portfolio-tag">Desert</span>
+                </div>
+                <div class="portfolio-item" data-category="editorial">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=80" alt="Studio">
+                    <span class="portfolio-tag">Studio</span>
+                </div>
+                <div class="portfolio-item" data-category="travel">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&auto=format&fit=crop&q=80" alt="Nature">
+                    <span class="portfolio-tag">Nature</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="section-header reveal">
+                <div class="section-tag">
+                    <i class="fas fa-chart-line"></i>
+                    Services
+                </div>
+                <h2 class="section-title">
+                    WHAT WE <span class="accent">OFFER</span>
+                </h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>PORTRAIT & HEADSHOTS</h3>
+                    <p>Professional studio and on-location sessions. Perfect for personal branding and corporate needs.</p>
+                    <a href="#" class="learn-more">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>COMMERCIAL WORK</h3>
+                    <p>High-impact product photography and brand campaigns that drive engagement and sales.</p>
+                    <a href="#" class="learn-more">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>EDITORIAL & TRAVEL</h3>
+                    <p>Magazine-quality storytelling through stunning editorials and immersive travel photography.</p>
+                    <a href="#" class="learn-more">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <div class="about-image reveal">
+                    <img src="gautam2.png.webp" alt="Gautam Modhvadiya">
+                </div>
+                <div class="about-content reveal">
+                    <div class="badge">
+                        <i class="fas fa-camera"></i>
+                        About Me
+                    </div>
+                    <h2>
+                        MEET GAUTAM
+                        <span class="highlight">MODHVADIYA</span>
+                    </h2>
+                    <p>Lead photographer at MG Photography with 8+ years of experience crafting cinematic, emotion-driven imagery. My work emphasizes the interplay of light, shadow, and human connection. Featured in major publications and brand campaigns worldwide.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="label">Email</span>
+                                <a href="mailto:kingu6069@gmail.com" class="value">kingu6069@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="label">Phone</span>
+                                <a href="tel:+918140223513" class="value">+91 81402 23513</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header reveal">
+                <div class="section-tag">
+                    <i class="fas fa-sparkles"></i>
+                    Get In Touch
+                </div>
+                <h2 class="section-title">
+                    LET'S CREATE <span class="highlight">TOGETHER</span>
+                </h2>
+            </div>
+
+            <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="YOUR NAME *" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="EMAIL *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="SUBJECT">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="TELL ME ABOUT YOUR PROJECT *" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                    Send Message
+                </button>
+            </form>
+
+            <div class="contact-item reveal" style="max-width: 600px; margin: 0 auto 40px;">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <span class="label">Studio</span>
+                    <span class="value">Jamnagar, Gujarat</span>
+                </div>
+            </div>
+
+            <div class="map-container reveal">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59017.5368596856!2d70.0356!3d22.4707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3957154934c04547%3A0x546e54c36c63540e!2sJamnagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+                <div class="map-overlay" onclick="window.open('https://maps.google.com/?q=Jamnagar,Gujarat', '_blank')">
+                    Open in Maps <i class="fas fa-external-link-alt"></i>
+                </div>
+            </div>
+
+            <div class="social-links reveal">
+    <a href="https://www.instagram.com/mg_photography_jam/?hl=en" target="_blank" class="social-link" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/@mgphotography2837" target="_blank" class="social-link" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 <span class="brand">MG PHOTOGRAPHY</span></p>
+        <p style="margin-top: 8px; font-size: 11px;">CRAFTED BY UDAY PANDAVADARA</p>
+    </footer>
+
+    <script src="mg index.js"></script>
+</body>
+</html>
